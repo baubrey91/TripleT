@@ -41,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		CE00ECE62605C5B300D48CF4 /* BoardTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTwo.swift; sourceTree = "<group>"; };
-		CE1C56992604CD7900663052 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CE4361082603F90400583A8F /* TripleT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripleT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE43610B2603F90400583A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE43610D2603F90400583A8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE00ECF82606EE5B00D48CF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE4361112603F90400583A8F /* Main.storyboard */,
+				CE4361162603F90600583A8F /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CE1C569A2604CD8C00663052 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +136,9 @@
 		CE43610A2603F90400583A8F /* TripleT */ = {
 			isa = PBXGroup;
 			children = (
-				CE1C569B2604CDA500663052 /* Control */,
 				CE1C569A2604CD8C00663052 /* Model */,
+				CE00ECF82606EE5B00D48CF4 /* View */,
+				CE1C569B2604CDA500663052 /* Control */,
 				CE4361562604467F00583A8F /* Resources */,
 				CE43614326042F5600583A8F /* Extensions */,
 				CE4361192603F90600583A8F /* Info.plist */,
@@ -167,11 +176,8 @@
 		CE4361562604467F00583A8F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CE1C56992604CD7900663052 /* README.md */,
 				CE43610B2603F90400583A8F /* AppDelegate.swift */,
-				CE4361112603F90400583A8F /* Main.storyboard */,
 				CE4361142603F90600583A8F /* Assets.xcassets */,
-				CE4361162603F90600583A8F /* LaunchScreen.storyboard */,
 				CE43610D2603F90400583A8F /* SceneDelegate.swift */,
 			);
 			path = Resources;
