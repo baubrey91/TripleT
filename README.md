@@ -4,9 +4,12 @@ Tic Tac Toe with custom dimensions
 ## Features
 - Player or computer can start
 - Score is recorded
+- Highlights win
 - Easily change board size
 - Restart board
 - Splash Screen
+
+![Screenshot](screenshot.png)
 
 ## Board Size
 It is assumed the board is at least 3 X 3 (you can hack it to be smaller but wont make for a good game).

@@ -14,6 +14,7 @@ struct Board {
     }
 
     func computersMove() -> TTTButton {
+        ///Check if we want to use MiniMax from environment variables
         guard ProcessInfo.processInfo.arguments.contains("MiniMaxAI") && size == 3 else { return DummyAI() }
 
         let bestResult = miniMax(game: self, player: .computer, depth: 0, lastMove: (row: -1, column: -1))
@@ -31,6 +32,8 @@ struct Board {
     func validateWin(lastPlayer: PlayState, lastMove: Location) -> [TTTButton]? {
 
         ///Checking row for win
+
+        /// We pass in the last move so we only check that row and column, not all of them, and check if its in the diagonal
 
         let row = boardState[lastMove.row]
         if row.filter({ $0.playState == lastPlayer }).count == size {
