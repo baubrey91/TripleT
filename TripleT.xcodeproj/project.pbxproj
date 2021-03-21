@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE00ECE72605C5B300D48CF4 /* BoardTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE00ECE62605C5B300D48CF4 /* BoardTwo.swift */; };
 		CE43610C2603F90400583A8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE43610B2603F90400583A8F /* AppDelegate.swift */; };
 		CE43610E2603F90400583A8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE43610D2603F90400583A8F /* SceneDelegate.swift */; };
 		CE4361102603F90400583A8F /* TTTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE43610F2603F90400583A8F /* TTTViewController.swift */; };
@@ -18,7 +19,7 @@
 		CE43613F2603FF4D00583A8F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE43613E2603FF4D00583A8F /* UIViewExtensions.swift */; };
 		CE43614526042F7200583A8F /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE43614426042F7200583A8F /* UIImageExtensions.swift */; };
 		CE43614A2604306000583A8F /* TTTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4361492604306000583A8F /* TTTButton.swift */; };
-		CE43614F260442A400583A8F /* TTTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE43614E260442A300583A8F /* TTTViewModel.swift */; };
+		CE43614F260442A400583A8F /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE43614E260442A300583A8F /* Board.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE00ECE62605C5B300D48CF4 /* BoardTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTwo.swift; sourceTree = "<group>"; };
+		CE1C56992604CD7900663052 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CE4361082603F90400583A8F /* TripleT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripleT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE43610B2603F90400583A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE43610D2603F90400583A8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +59,7 @@
 		CE43613E2603FF4D00583A8F /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		CE43614426042F7200583A8F /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		CE4361492604306000583A8F /* TTTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTButton.swift; sourceTree = "<group>"; };
-		CE43614E260442A300583A8F /* TTTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTViewModel.swift; sourceTree = "<group>"; };
+		CE43614E260442A300583A8F /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE1C569A2604CD8C00663052 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE43614E260442A300583A8F /* Board.swift */,
+				CE00ECE62605C5B300D48CF4 /* BoardTwo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE1C569B2604CDA500663052 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				CE43610F2603F90400583A8F /* TTTViewController.swift */,
+				CE4361492604306000583A8F /* TTTButton.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
 		CE4360FF2603F90400583A8F = {
 			isa = PBXGroup;
 			children = (
@@ -107,11 +128,10 @@
 		CE43610A2603F90400583A8F /* TripleT */ = {
 			isa = PBXGroup;
 			children = (
+				CE1C569B2604CDA500663052 /* Control */,
+				CE1C569A2604CD8C00663052 /* Model */,
 				CE4361562604467F00583A8F /* Resources */,
 				CE43614326042F5600583A8F /* Extensions */,
-				CE43610F2603F90400583A8F /* TTTViewController.swift */,
-				CE4361492604306000583A8F /* TTTButton.swift */,
-				CE43614E260442A300583A8F /* TTTViewModel.swift */,
 				CE4361192603F90600583A8F /* Info.plist */,
 			);
 			path = TripleT;
@@ -147,6 +167,7 @@
 		CE4361562604467F00583A8F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE1C56992604CD7900663052 /* README.md */,
 				CE43610B2603F90400583A8F /* AppDelegate.swift */,
 				CE4361112603F90400583A8F /* Main.storyboard */,
 				CE4361142603F90600583A8F /* Assets.xcassets */,
@@ -288,7 +309,8 @@
 			files = (
 				CE4361102603F90400583A8F /* TTTViewController.swift in Sources */,
 				CE43610C2603F90400583A8F /* AppDelegate.swift in Sources */,
-				CE43614F260442A400583A8F /* TTTViewModel.swift in Sources */,
+				CE43614F260442A400583A8F /* Board.swift in Sources */,
+				CE00ECE72605C5B300D48CF4 /* BoardTwo.swift in Sources */,
 				CE43614A2604306000583A8F /* TTTButton.swift in Sources */,
 				CE43614526042F7200583A8F /* UIImageExtensions.swift in Sources */,
 				CE43613F2603FF4D00583A8F /* UIViewExtensions.swift in Sources */,
