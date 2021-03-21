@@ -1,21 +1,22 @@
 import Foundation
 
 struct Board {
+
+    var boardState: [[TTTButton]]
+    var size: Int
+
     init(boardState: [[TTTButton]]? = nil, size: Int) {
         self.size = size
         self.boardState = boardState ?? Array(repeating: Array(repeating: TTTButton(), count: size), count: size)
     }
-
-    var boardState: [[TTTButton]]
-    var size: Int
 
     var validMoves: [TTTButton] {
         return boardState.flatMap { $0.filter { $0.playState == .unplayed }}
     }
 
     func computersMove() -> TTTButton {
-        ///Check if we want to use MiniMax from environment variables
-        guard ProcessInfo.processInfo.arguments.contains("MiniMaxAI") && size == 3 else { return DummyAI() }
+        ///Check if we want to use MiniMax from environment variables, anything over 9 valid moves makes it too slow
+        guard ProcessInfo.processInfo.arguments.contains("MiniMaxAI") && validMoves.count < 9 else { return DummyAI() }
 
         let bestResult = miniMax(game: self, player: .computer, depth: 0, lastMove: (row: -1, column: -1))
         guard let move = bestResult.move else {
@@ -28,12 +29,10 @@ struct Board {
         return move
     }
 
-
     func validateWin(lastPlayer: PlayState, lastMove: Location) -> [TTTButton]? {
+        /// We pass in the last move so we only check that row and column, not all of them, and check if its in the diagonal
 
         ///Checking row for win
-
-        /// We pass in the last move so we only check that row and column, not all of them, and check if its in the diagonal
 
         let row = boardState[lastMove.row]
         if row.filter({ $0.playState == lastPlayer }).count == size {
@@ -131,6 +130,10 @@ extension Board {
         }
 
         ///Random Move
+        return randomMove()
+    }
+
+    private func randomMove() -> TTTButton {
         let random = Int.random(in: 0..<validMoves.count)
         let move = validMoves[random]
 

@@ -11,6 +11,9 @@ Tic Tac Toe with custom dimensions
 
 ![Screenshot](screenshot.png)
 
+## Style 
+Follows Rey Wenderlich style guide https://github.com/raywenderlich/swift-style-guide
+
 ## Board Size
 It is assumed the board is at least 3 X 3 (you can hack it to be smaller but wont make for a good game).
 The maximum board size is 25 X 25. I think the largest I could display on an iPhone Pro was 70 x 70 but the AI will take too long
@@ -29,8 +32,9 @@ Currently there is testing for all win scenarios for both computer and player
 ## Future Improvements
  - More tests
  - Improved AI
- - Animation, nicer assets
+ - Animations, nicer assets
  - Use ARKit to play in the real world
+ - Support Landscape
  - Settings to change scheme, strength of AI, etc
 
 ## Credited Work

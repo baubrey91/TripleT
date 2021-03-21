@@ -1,3 +1,11 @@
+
+
+
+///Just left this code here to show I tried using a board with arrays of ints instead of buttons but had no luck in improving the AI
+
+
+
+
 //import Foundation
 //
 //struct Board {
