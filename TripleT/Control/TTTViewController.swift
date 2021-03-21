@@ -13,6 +13,7 @@ fileprivate extension String {
 fileprivate extension Double {
     static let stepperMinimumValue: Double = 3
     static let stepperMaximumValue: Double = 25
+    static let rotationTime: Double = 2
 }
 
 fileprivate extension CGFloat {
@@ -205,6 +206,9 @@ final class TTTViewController: UIViewController {
         if let winningMoves = board.validateWin(lastPlayer: .player, lastMove: button.location) {
             for moves in winningMoves {
                 moves.backgroundColor = .red
+                    UIView.animate(withDuration: Double.rotationTime, animations: {
+                        moves.imageView?.rotate()
+                    })
             }
             playerScore += 1
             return
@@ -224,6 +228,9 @@ final class TTTViewController: UIViewController {
                 if let winningMoves = strongSelf.board.validateWin(lastPlayer: .computer, lastMove: move.location) {
                     for moves in winningMoves {
                         moves.backgroundColor = .red
+                        UIView.animate(withDuration: Double.rotationTime, animations: {
+                            moves.imageView?.rotate()
+                        })
                     }
                     strongSelf.computerScore += 1
                     return
